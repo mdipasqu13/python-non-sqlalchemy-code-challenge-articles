@@ -181,7 +181,8 @@ class Magazine:
             return list_of_authors
         else:
             return None
-        
+    # top_publisher invokes max to iterate over instances of articles for each Magazine class instance then return the magazine with the highest number of articles.
+    # if there are no magazines or if an exception occurs, returns "None".
     @classmethod
     def top_publisher(cls):
         try:
