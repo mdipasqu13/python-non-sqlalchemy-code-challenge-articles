@@ -105,7 +105,6 @@ class Magazine:
     def __init__(self, name, category):
         self._name = name
         self._category = category
-        # self.articles = []
         self.all.append(self)
         
     
@@ -183,44 +182,9 @@ class Magazine:
         else:
             return None
         
-    # def article_count(self):
-    #     self.articles()
-    #     return 1
-        # should return the number of articles inside this magazine
-        
     @classmethod
     def top_publisher(cls):
         try:
             return max(cls.all, key=lambda magazine:len(magazine.articles()) if magazine.articles() else None)
         except:
             return None
-        
-    # @classmethod
-    # def top_publisher(cls):
-        
-    #     if not cls.all:
-    #         return None
-    #     else:
-        
-    #         # breakpoint()
-    #         # return max(cls.all, key=lambda e: Magazine.article_count(e))
-    #         return Magazine.all[0]
-   
-    
-    # @classmethod
-    # def top_publisher(cls):
-    #     if not cls.all:
-    #         return None
-    #     return max(cls.all, key=lambda magazine: len(magazine.articles()))
-    
-    
-    
-    
-    # @classmethod
-    # def top_publisher(cls):
-    #     if not cls._instances or all(len(articles) == 0 for articles in cls._instances.values()):
-    #         return None 
-        
-    #     top_magazine = max(cls._instances, key=lambda m: len(cls._instances[m]), default=None)
-    #     return top_magazine if cls._instances[top_magazine] else None
-      
